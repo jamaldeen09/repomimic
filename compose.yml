@@ -1,0 +1,14 @@
+name: "repomimic"
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    environment:
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

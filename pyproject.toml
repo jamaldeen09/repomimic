@@ -19,6 +19,10 @@ classifiers = [
 license = "MIT"
 license-files = ["LICENSE"]
 dependencies = [
+    "greenlet>=3.5.6",
+    "pgvector>=0.5.1",
+    "pydantic-settings>=2.15.0",
+    "sqlalchemy>=2.0.54",
 ]
 
 [project.scripts]
@@ -28,6 +32,12 @@ repomimic = "repomimic.cli:main"
 "Homepage" = "https://github.com/jamaldeen09/repomimic"
 "Repository" = "https://github.com/jamaldeen09/repomimic"
 
+[project.optional-dependencies]
+postgres = ["asyncpg>=0.29.0",]
+sqlite = ["aiosqlite>=0.19.0",]
+mysql = ["aiomysql>=0.2.0",]
+
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
