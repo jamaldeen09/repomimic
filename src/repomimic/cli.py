@@ -1,5 +1,9 @@
 import typer
-app = typer.Typer()
+
+app = typer.Typer(
+    name="repomimic",
+    help="CLI tool that indexes source code from Git repos into a database so AI can mirror their implementation patterns.",
+)
 
 def main() -> None:
     app()
