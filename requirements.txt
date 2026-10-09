@@ -1,16 +1,23 @@
 aiomysql==0.3.2
 aiosqlite==0.22.1
+annotated-doc==0.0.5
 annotated-types==0.8.0
 asyncpg==0.32.0
 greenlet==3.5.6
+markdown-it-py==4.2.0
+mdurl==0.1.2
 pgvector==0.5.1
 pydantic==2.14.0
 pydantic-settings==2.15.0
 pydantic_core==2.50.0
+Pygments==2.21.0
 PyMySQL==1.2.3
 python-dotenv==1.2.4
--e git+https://github.com/jamaldeen09/repomimic.git@17fa9d4498c00b60a435ac9ff13b2d3aaba4c743#egg=repomimic
+-e git+https://github.com/jamaldeen09/repomimic.git@baad403458fa3f5fbfaaba1e4395935372ba69b1#egg=repomimic
+rich==15.0.0
+shellingham==1.5.4
 SQLAlchemy==2.1.4
+typer==0.27.3
 typing-inspection==0.4.4
 typing_extensions==4.16.0
 uv==0.12.24
