@@ -1,0 +1,33 @@
+[project]
+name = "repomimic"
+version = "0.0.1"
+authors = [
+  { name = "Olatunji Jamaldeen Omotoyosi", email = "jamaldeen.o@yahoo.com" },
+]
+description = "CLI tool that indexes source code from Git repos into a database so AI can mirror their implementation patterns."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = [
+]
+
+[project.scripts]
+repomimic = "repomimic.cli:main"
+
+[project.urls]
+"Homepage" = "https://github.com/jamaldeen09/repomimic"
+"Repository" = "https://github.com/jamaldeen09/repomimic"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
