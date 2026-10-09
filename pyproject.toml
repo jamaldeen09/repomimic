@@ -19,6 +19,8 @@ classifiers = [
 license = "MIT"
 license-files = ["LICENSE"]
 dependencies = [
+    "pgvector>=0.5.1",
+    "sqlalchemy>=2.0.54",
 ]
 
 [project.scripts]

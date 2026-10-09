@@ -1,1 +1,5 @@
+pgvector==0.5.1
+-e git+https://github.com/jamaldeen09/repomimic.git@48d4649a87445b13296eb4ab0f7144cb212e2aa1#egg=repomimic
+SQLAlchemy==2.1.4
+typing_extensions==4.16.0
 uv==0.12.24
