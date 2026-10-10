@@ -34,14 +34,10 @@ class Symbol(Base):
     - blob_id (FK): Foreign key to Blob (which file contains this symbol).
     - name: Name of the symbol (e.g., "authenticate").
     - kind: Type of symbol (function, class, constant, etc.).
-    - line_start: Starting line number in file.
-    - line_end: Ending line number in file.
     - parent_symbol_id (FK): If nested (e.g., method inside a class).
-    - docstring: Documentation/docstring if present.
-    - return_type: Inferred return type if applicable.
-    - parameters: JSON list of parameters with types.
     - embedding: Vector embedding for semantic search.
     - created_at: When this symbol was discovered.
+    - metadata: Additional metadata dictionary (JSONB).
     """
     __tablename__ = "symbols"
     
