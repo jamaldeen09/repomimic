@@ -11,13 +11,13 @@ from sqlalchemy import (
     func, 
     PrimaryKeyConstraint, 
     Uuid,
-    Enum as SQLAlchemyEnum,
     ForeignKey,
     ForeignKeyConstraint,
     Index,
 )
 
 from datetime import datetime
+from sqlalchemy.dialects.postgresql import JSONB
 from pgvector.sqlalchemy import Vector
 
 from .aware_datetime import AwareDateTime
@@ -67,6 +67,11 @@ class Symbol(Base):
     kind: Mapped[str] = mapped_column(
         String(50),
         index=True,
+        nullable=False,
+    )
+    metadata: Mapped[dict] = mapped_column(
+        JSONB,
+        server_default="{}",
         nullable=False,
     )
     parent_symbol_id: Mapped[uuid.UUID | None] = mapped_column(
