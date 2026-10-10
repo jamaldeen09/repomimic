@@ -37,7 +37,7 @@ class Symbol(Base):
     - parent_symbol_id (FK): If nested (e.g., method inside a class).
     - embedding: Vector embedding for semantic search.
     - created_at: When this symbol was discovered.
-    - metadata: Additional metadata dictionary (JSONB).
+    - symbol_metadata: Additional metadata dictionary (JSONB).
     """
     __tablename__ = "symbols"
     
@@ -65,7 +65,7 @@ class Symbol(Base):
         index=True,
         nullable=False,
     )
-    metadata: Mapped[dict] = mapped_column(
+    symbol_metadata: Mapped[dict] = mapped_column(
         JSONB,
         server_default="{}",
         nullable=False,
