@@ -5,7 +5,7 @@ services:
     container_name: app-postgres
     image: pgvector/pgvector:pg16
     ports:
-      - "${POSTGRES_PORT:-5432}:5432"
+      - "${APP_POSTGRES_PORT:-5432}:5432"
     environment:
       - POSTGRES_PASSWORD=${APP_POSTGRES_PASSWORD}
     volumes:
