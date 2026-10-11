@@ -30,7 +30,7 @@ dependencies = [
 ]
 
 [project.scripts]
-repomimic = "repomimic.cli:main"
+repomimic = "repomimic.main:main"
 
 [project.urls]
 "Homepage" = "https://github.com/jamaldeen09/repomimic"
