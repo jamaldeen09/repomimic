@@ -69,6 +69,36 @@ wheels = [
 ]
 
 [[package]]
+name = "async-typer"
+version = "0.1.10"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version < '3.11'",
+]
+dependencies = [
+    { name = "typer" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/25/5f/04c052bf7f8633f7fd3dd67cd8f3542a2aff432fa1e5b14b737465b44e0f/async_typer-0.1.10.tar.gz", hash = "sha256:69a857a2b66a8604e4bac3b5c44a6384b35da9f5314c7847da561e874b2bad39", size = 2093, upload-time = "2025-08-27T14:22:04.073Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b7/97/1d78783a1a568537f5d29c236dfc3e1723fbc651d3c94005ac5724aa26ca/async_typer-0.1.10-py3-none-any.whl", hash = "sha256:25aadaf6e54c1d47a9c2d6a2bbb0832a2a2fe700be4bb52f38843514d724b380", size = 2598, upload-time = "2025-08-27T14:22:02.964Z" },
+]
+
+[[package]]
+name = "async-typer"
+version = "0.27.2"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version >= '3.11'",
+]
+dependencies = [
+    { name = "typer" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/a0/b4/376bca99068ec7a8186c02cf6800c19c5c5487010632924dac583533ddcc/async_typer-0.27.2.tar.gz", hash = "sha256:18425d2e7e5ad626013afd414c0f37081c0ff493eb3685567d8ed94764aa3b1b", size = 15746, upload-time = "2026-09-04T11:13:46.862Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/36/11/fcbff0a648e022fbc5046ee408b72e0a4fc251dd11cc832102e6f27f2a21/async_typer-0.27.2-py3-none-any.whl", hash = "sha256:2546ce0a10729fb1ece099cbd81551baa6822495f3dad3900737a77d76ebe41b", size = 8271, upload-time = "2026-09-04T11:13:45.838Z" },
+]
+
+[[package]]
 name = "asyncpg"
 version = "0.32.0"
 source = { registry = "https://pypi.org/simple" }
@@ -551,6 +581,8 @@ name = "repomimic"
 version = "0.0.1"
 source = { editable = "." }
 dependencies = [
+    { name = "async-typer", version = "0.1.10", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
+    { name = "async-typer", version = "0.27.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
     { name = "greenlet" },
     { name = "httpx" },
     { name = "pgvector" },
@@ -559,7 +591,6 @@ dependencies = [
     { name = "sqlalchemy", version = "2.1.4", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
     { name = "tree-sitter" },
     { name = "tree-sitter-python" },
-    { name = "typer" },
 ]
 
 [package.optional-dependencies]
@@ -577,6 +608,7 @@ sqlite = [
 requires-dist = [
     { name = "aiomysql", marker = "extra == 'mysql'", specifier = ">=0.2.0" },
     { name = "aiosqlite", marker = "extra == 'sqlite'", specifier = ">=0.19.0" },
+    { name = "async-typer", specifier = ">=0.1.10" },
     { name = "asyncpg", marker = "extra == 'postgres'", specifier = ">=0.29.0" },
     { name = "greenlet", specifier = ">=3.5.6" },
     { name = "httpx", specifier = ">=0.28.1" },
@@ -585,7 +617,6 @@ requires-dist = [
     { name = "sqlalchemy", specifier = ">=2.0.54" },
     { name = "tree-sitter", specifier = ">=0.26.0" },
     { name = "tree-sitter-python", specifier = ">=0.25.0" },
-    { name = "typer", specifier = ">=0.27.3" },
 ]
 provides-extras = ["postgres", "sqlite", "mysql"]
 
