@@ -23,6 +23,8 @@ dependencies = [
     "pgvector>=0.5.1",
     "pydantic-settings>=2.15.0",
     "sqlalchemy>=2.0.54",
+    "tree-sitter>=0.26.0",
+    "tree-sitter-python>=0.25.0",
     "typer>=0.27.3",
 ]
 

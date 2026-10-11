@@ -13,10 +13,12 @@ pydantic_core==2.50.0
 Pygments==2.21.0
 PyMySQL==1.2.3
 python-dotenv==1.2.4
--e git+https://github.com/jamaldeen09/repomimic.git@baad403458fa3f5fbfaaba1e4395935372ba69b1#egg=repomimic
+-e git+https://github.com/jamaldeen09/repomimic.git@88039972202bd8149fc7cc9c5d38c2a2d0a0ee86#egg=repomimic
 rich==15.0.0
 shellingham==1.5.4
 SQLAlchemy==2.1.4
+tree-sitter==0.26.0
+tree-sitter-python==0.25.0
 typer==0.27.3
 typing-inspection==0.4.4
 typing_extensions==4.16.0
