@@ -1,6 +1,8 @@
 import uuid
 
 from tree_sitter import Node
+
+from src.repomimic.symbol_extractors.core import SymbolExtractor
 from .schemas import (
     Parameters, 
     PySymbol, 
@@ -24,8 +26,11 @@ PARAM_TYPED_TYPES = frozenset({"typed_parameter", "typed_default_parameter"})
 PARAM_DEFAULT_TYPES = frozenset({"default_parameter"})
 BRACKET_PUNCTUATION = frozenset({"(" , ")", "[", "]"})
 
-class PySymbolExtractor():
+class PySymbolExtractor(SymbolExtractor):
     """Extracts Python symbols from tree-sitter parse trees with high-performance lookups and bounded byte slicing."""
+
+    container_types: frozenset[str] = FUNCTION_AND_CLASS_TYPES
+    wrapper_types: frozenset[str] = frozenset({"decorated_definition"})
 
     @staticmethod
     def _clean_docstring(docstring: str) -> str:
@@ -496,5 +501,3 @@ class PySymbolExtractor():
             )
 
         return None
-
-
